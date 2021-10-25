@@ -20,7 +20,7 @@ ipboard Invision Community is not included in the container, for more informatio
 Example with local storage:
 
 ```bash
-$ docker run -d --name ipboard -v "{your-ipboard-installation-files}":/app -e WEB_ALIAS_DOMAIN=mydomain.com cmer81/ipboard:latest
+$ docker run -d --name ipboard -v "{your-ipboard-installation-files}":/app -e WEB_ALIAS_DOMAIN=mydomain.com maxime1907/ipboard:latest
 ```
 
 ## Using an external database
@@ -39,7 +39,7 @@ IPboard:
 $ docker run -d \
     -p 443:443 -p 80:80 \
     -v ipboard_html:/app \
-    cmer81/ipboard:latest
+    maxime1907/ipboard:latest
 ```
 
 Database:
