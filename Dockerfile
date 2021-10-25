@@ -1,17 +1,14 @@
-FROM webdevops/php-nginx-dev:7.4-alpine
+FROM webdevops/php-nginx:7.4-alpine
 
 ENV WEB_DOCUMENT_ROOT=/app \
     WEB_DOCUMENT_INDEX=index.php \
     WEB_ALIAS_DOMAIN=*.vm \
     WEB_PHP_TIMEOUT=600 \
-    WEB_PHP_SOCKET="" \
-    PHP_DISPLAY_ERRORS=1 \
     PHP_MEMORY_LIMIT=2048M \
     PHP_MAX_EXECUTION_TIME=-1 
 ENV WEB_PHP_SOCKET=127.0.0.1:9000
 
 COPY conf/ /opt/docker/
-
 
 RUN set -x \
     && apk-install \
